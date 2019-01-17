@@ -2,7 +2,7 @@
 
 namespace Pluralsight.DesignPatterns
 {
-    public class Class1
+    public class Adapter
     {
     }
 }
