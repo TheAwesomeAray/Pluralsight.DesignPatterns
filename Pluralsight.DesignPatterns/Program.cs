@@ -1,5 +1,6 @@
 ﻿using Pluralsight.DesignPatterns.Bridge;
 using Pluralsight.DesignPatterns.Builder;
+using Pluralsight.DesignPatterns.ChainOfResponsibility;
 using System;
 using System.Collections.Generic;
 
@@ -10,7 +11,27 @@ namespace Pluralsight.DesignPatterns
         public static void Main(string[] args)
         {
 
-            Builder();
+            ChainOfCommand();
+        }
+
+        public static void ChainOfCommand()
+        {
+            ExpenseHandler william = new ExpenseHandler(new Employee(0));
+            ExpenseHandler mary = new ExpenseHandler(new Employee(1000));
+            ExpenseHandler victor = new ExpenseHandler(new Employee(5000));
+            ExpenseHandler paula = new ExpenseHandler(new Employee(20000));
+
+            william.RegisterNext(mary);
+            mary.RegisterNext(victor);
+            paula.RegisterNext(paula);
+
+            Console.WriteLine("Please enter the expense amount;");
+            var expenseAmount = decimal.Parse(Console.ReadLine());
+
+            var response = william.Approve(new ExpenseReport() { Total = expenseAmount });
+
+            Console.WriteLine(response);
+            Console.ReadKey();
         }
 
         public static void Builder()
