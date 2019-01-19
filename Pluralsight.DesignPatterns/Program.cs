@@ -3,6 +3,7 @@ using Pluralsight.DesignPatterns.Builder;
 using Pluralsight.DesignPatterns.ChainOfResponsibility;
 using Pluralsight.DesignPatterns.Command;
 using Pluralsight.DesignPatterns.Composite;
+using Pluralsight.DesignPatterns.Decorator;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +14,7 @@ namespace Pluralsight.DesignPatterns
         public static void Main(string[] args)
         {
 
-            CompositeProgram.Run();
+            DecoratorProgram.Run();
             Console.ReadLine();
         }
 

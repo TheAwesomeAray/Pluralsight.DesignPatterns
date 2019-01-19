@@ -13,7 +13,7 @@ namespace Pluralsight.DesignPatterns.Composite
 
             foreach (var party in Parties)
             {
-                decimal partyPercentage = (decimal)party.Members.Count / (decimal)raidSize;
+                decimal partyPercentage = (decimal)party.Members.Count / raidSize;
                 party.ReceiveLoot(gold * partyPercentage);
             }
         }
