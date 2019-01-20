@@ -6,6 +6,7 @@ using Pluralsight.DesignPatterns.Composite;
 using Pluralsight.DesignPatterns.Decorator;
 using Pluralsight.DesignPatterns.Facade;
 using Pluralsight.DesignPatterns.Factory;
+using Pluralsight.DesignPatterns.Interpreter;
 using System;
 using System.Collections.Generic;
 
@@ -16,7 +17,7 @@ namespace Pluralsight.DesignPatterns
         public static void Main(string[] args)
         {
 
-            FactoryProgram.RunRefactor();
+            InterpreterProgram.Run();
             Console.ReadLine();
         }
 
