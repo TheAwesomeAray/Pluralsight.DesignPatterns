@@ -4,6 +4,8 @@ using Pluralsight.DesignPatterns.ChainOfResponsibility;
 using Pluralsight.DesignPatterns.Command;
 using Pluralsight.DesignPatterns.Composite;
 using Pluralsight.DesignPatterns.Decorator;
+using Pluralsight.DesignPatterns.Facade;
+using Pluralsight.DesignPatterns.Factory;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +16,7 @@ namespace Pluralsight.DesignPatterns
         public static void Main(string[] args)
         {
 
-            DecoratorProgram.Run();
+            FactoryProgram.RunRefactor();
             Console.ReadLine();
         }
 
