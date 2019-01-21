@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.DesignPatterns"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatternsTests", "DesignPatternsTests\DesignPatternsTests.csproj", "{1466CE3F-4A56-403E-BAAA-2D1AB73CA8D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAggregator", "EventAggregator\EventAggregator.csproj", "{B502C4C0-C1C3-4573-8697-3B7A3D0D21CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAggregatorDemo", "EventAggregator\EventAggregatorDemo.csproj", "{B502C4C0-C1C3-4573-8697-3B7A3D0D21CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightDemo", "FlyweightDemo\FlyweightDemo.csproj", "{5DDA2BAD-6DFC-453A-B221-10B35D1D4A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MomentoDemo", "MomentoDemo\MomentoDemo.csproj", "{3892DB5B-7479-4DB1-B4C8-506820E5576A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5DDA2BAD-6DFC-453A-B221-10B35D1D4A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DDA2BAD-6DFC-453A-B221-10B35D1D4A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DDA2BAD-6DFC-453A-B221-10B35D1D4A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3892DB5B-7479-4DB1-B4C8-506820E5576A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3892DB5B-7479-4DB1-B4C8-506820E5576A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3892DB5B-7479-4DB1-B4C8-506820E5576A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3892DB5B-7479-4DB1-B4C8-506820E5576A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
