@@ -10,7 +10,7 @@ namespace Pluralsight.DesignPatterns.LazyLoad.VirtualProxy
         {
             return new OrderProxy()
             {
-                Id = id
+                Id = id;
             }
         }
     }
