@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
+using System.Windows.Input;
 
 namespace Pluralsight.DesignPatterns.MVVM
 {
@@ -15,15 +17,35 @@ namespace Pluralsight.DesignPatterns.MVVM
                 OnPropertyChanged("ModelPerson");
             }
         }
+
+        private ICommand _SavePersonCommand;
+        public ICommand SavePersonCommand
+        {
+            get { return _SavePersonCommand; }
+            set
+            {
+                _SavePersonCommand = value;
+                OnPropertyChanged("SavePersonCommand");
+            }
+        }
+
+
         public MainViewModel()
         {
+            InitializeCommand();
             ModelPerson = LoadPerson();
         }
 
-        public MainViewModel(Person person)
+        private void InitializeCommand()
         {
-            _ModelPerson = person;
+            _SavePersonCommand = new SavePersonCommand(UpdatePerson);
         }
+
+        private void UpdatePerson()
+        {
+            ModelPerson.UpdatedDate = DateTime.Now;
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string property)
@@ -38,6 +60,27 @@ namespace Pluralsight.DesignPatterns.MVVM
                 FirstName = "Andrew",
                 LastName = "Ray"
             };
+        }
+    }
+
+    public class SavePersonCommand : ICommand
+    {
+        Action _executeMethod;
+        public event EventHandler CanExecuteChanged;
+
+        public SavePersonCommand(Action executeMethod)
+        {
+            _executeMethod = executeMethod;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            _executeMethod.Invoke();
         }
     }
 }
