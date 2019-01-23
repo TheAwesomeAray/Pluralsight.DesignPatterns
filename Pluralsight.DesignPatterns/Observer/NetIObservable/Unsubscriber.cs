@@ -8,7 +8,7 @@ namespace Pluralsight.DesignPatterns.Observer
         private List<IObserver<Stock>> observers;
         private IObserver<Stock> observer;
 
-        public Unsubscriber(List<IObserver<Stock>> observers, IObserver<StockTicker> observer)
+        public Unsubscriber(List<IObserver<Stock>> observers, IObserver<Stock> observer)
         {
             this.observers = observers;
             this.observer = observer;
