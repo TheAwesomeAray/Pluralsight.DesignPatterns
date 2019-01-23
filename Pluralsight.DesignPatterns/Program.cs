@@ -1,11 +1,6 @@
 ﻿using Pluralsight.DesignPatterns.Bridge;
 using Pluralsight.DesignPatterns.Builder;
 using Pluralsight.DesignPatterns.ChainOfResponsibility;
-using Pluralsight.DesignPatterns.Command;
-using Pluralsight.DesignPatterns.Composite;
-using Pluralsight.DesignPatterns.Decorator;
-using Pluralsight.DesignPatterns.Facade;
-using Pluralsight.DesignPatterns.Factory;
 using Pluralsight.DesignPatterns.Interpreter;
 using System;
 using System.Collections.Generic;
