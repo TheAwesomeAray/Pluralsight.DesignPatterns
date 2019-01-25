@@ -18,5 +18,6 @@ namespace Pluralsight.DesignPatterns.LazyLoad
 
         public string Address { get; internal set; }
         public string CompanyName { get; internal set; }
+        public DateTime DateOfBirth  { get; internal set; }
     }
 }
